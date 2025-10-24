@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dometrain.Aspire.AppHost", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dometrain.Aspire.ServiceDefaults", "src\Dometrain.Aspire.ServiceDefaults\Dometrain.Aspire.ServiceDefaults.csproj", "{4AD00247-CBFB-46AD-8182-E18C4D08EE9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dometrain.Cart.Processor", "src\Dometrain.Cart.Processor\Dometrain.Cart.Processor.csproj", "{83E1046E-2CEE-4145-BF90-7DC2294A6619}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,7 @@ Global
 		{BCD98E15-8F73-4F5A-8F9B-3A1BC752DB41} = {EA020C9E-BECD-40C1-98B3-48070D728500}
 		{4245C08E-C7F5-4826-8B15-6D7B68C2D2EA} = {EA020C9E-BECD-40C1-98B3-48070D728500}
 		{4AD00247-CBFB-46AD-8182-E18C4D08EE9A} = {EA020C9E-BECD-40C1-98B3-48070D728500}
+		{83E1046E-2CEE-4145-BF90-7DC2294A6619} = {EA020C9E-BECD-40C1-98B3-48070D728500}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BCD98E15-8F73-4F5A-8F9B-3A1BC752DB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -38,5 +41,9 @@ Global
 		{4AD00247-CBFB-46AD-8182-E18C4D08EE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AD00247-CBFB-46AD-8182-E18C4D08EE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AD00247-CBFB-46AD-8182-E18C4D08EE9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E1046E-2CEE-4145-BF90-7DC2294A6619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E1046E-2CEE-4145-BF90-7DC2294A6619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E1046E-2CEE-4145-BF90-7DC2294A6619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E1046E-2CEE-4145-BF90-7DC2294A6619}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

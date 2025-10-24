@@ -101,7 +101,12 @@ public class ShoppingCartRepository : IShoppingCartRepository
         var container = _cosmosClient.GetContainer(DatabaseId, ContainerId);
         try
         {
-            await container.DeleteItemAsync<ShoppingCart>(studentId.ToString(), new PartitionKey(studentId.ToString()));
+            var response = await container.UpsertItemAsync(new ShoppingCart
+            {
+                StudentId = studentId,
+                CourseIds = []
+            });
+            return response.StatusCode is HttpStatusCode.OK or HttpStatusCode.Created;
             return true;
         }
         catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)

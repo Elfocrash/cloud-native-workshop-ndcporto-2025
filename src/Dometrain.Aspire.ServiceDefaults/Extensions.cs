@@ -66,6 +66,7 @@ public static class Extensions
                         // Exclude health check requests from tracing
                         tracing.Filter = context =>
                             !context.Request.Path.StartsWithSegments(HealthEndpointPath)
+                            && !context.Request.Path.StartsWithSegments("/metrics")
                             && !context.Request.Path.StartsWithSegments(AlivenessEndpointPath)
                     )
                     // Uncomment the following line to enable gRPC instrumentation (requires the OpenTelemetry.Instrumentation.GrpcNetClient package)
@@ -87,6 +88,8 @@ public static class Extensions
             builder.Services.AddOpenTelemetry().UseOtlpExporter();
         }
 
+        builder.Services.AddOpenTelemetry().WithMetrics(x => x.AddPrometheusExporter());
+        
         // Uncomment the following lines to enable the Azure Monitor exporter (requires the Azure.Monitor.OpenTelemetry.AspNetCore package)
         //if (!string.IsNullOrEmpty(builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"]))
         //{
@@ -122,6 +125,8 @@ public static class Extensions
             });
         }
 
+        app.MapPrometheusScrapingEndpoint();
+        
         return app;
     }
 }
